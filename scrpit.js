@@ -1,4 +1,3 @@
-// Function to fetch data from the API
 async function fetchData() {
   const urls = [
     "https://api.artic.edu/api/v1/artworks/129883",
@@ -48,7 +47,6 @@ function display(data) {
   });
 }
 
-// Call fetchData function to fetch data from the API and then display it
 fetchData()
   .then(display)
   .catch((error) => console.error("Error:", error));
