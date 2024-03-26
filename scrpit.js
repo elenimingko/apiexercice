@@ -4,6 +4,7 @@ async function fetchData() {
     "https://api.artic.edu/api/v1/artworks/129884",
     "https://api.artic.edu/api/v1/artworks/129885",
   ];
+  console.log(urls);
 
   try {
     const responses = await Promise.all(urls.map((url) => fetch(url)));
@@ -36,12 +37,8 @@ function display(data) {
     const description = document.createElement("p");
     description.textContent = artwork.data.description;
 
-    const image = document.createElement("img");
-    image.src = artwork.config.url;
-
     div.appendChild(title);
     div.appendChild(description);
-    div.appendChild(image);
 
     container.appendChild(div);
   });
