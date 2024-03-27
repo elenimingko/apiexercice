@@ -37,8 +37,15 @@ function display(data) {
     const description = document.createElement("p");
     description.textContent = artwork.data.description;
 
+    const image = document.createElement("img");
+
+    image.src = `https://www.artic.edu/iiif/2/${artwork.data.image_id}/full/843,/0/default.jpg`;
+
+    image.alt = artwork.data.title;
+
     div.appendChild(title);
     div.appendChild(description);
+    div.appendChild(image);
 
     container.appendChild(div);
   });
